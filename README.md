@@ -15,3 +15,11 @@
 
 > > npm i --save @nestjs/config
 
+> > npm i @nestjs/axios
+
+
+> 생성 cli
+> > nest g mo 이름
+> > nest g co 이름
+> > nest g s 이름
+
