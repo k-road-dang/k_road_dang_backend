@@ -22,4 +22,5 @@
 > > nest g mo 이름
 > > nest g co 이름
 > > nest g s 이름
+> > nest g resource [name]
 
