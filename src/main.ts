@@ -4,11 +4,10 @@ import { RequestMethod, ValidationPipe } from '@nestjs/common';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 
 const PORT = 3000;
-const PREFIX = '/v1';
+const PREFIX = 'api/v1';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  await app.listen(3000);
 
   app.setGlobalPrefix(PREFIX, {
     exclude: [{ path: '/', method: RequestMethod.GET }],
@@ -16,12 +15,12 @@ async function bootstrap() {
 
   const config = new DocumentBuilder()
     .setTitle('경로당 Server API')
-    .setDescription('경로당 API 명세서')
+    .setDescription('경로당 API 명세서 화이팅하자!')
     .setVersion('Dev_1.0')
     .build();
 
   const swagger = SwaggerModule.createDocument(app, config);
-  SwaggerModule.setup('docs', app, swagger);
+  SwaggerModule.setup('api/v1/docs', app, swagger);
 
   await app.listen(PORT);
 

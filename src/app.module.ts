@@ -7,12 +7,14 @@ import { APP_FILTER, APP_INTERCEPTOR, APP_PIPE } from '@nestjs/core';
 import { HttpExceptionFilter } from './common/filters/http-exception.filter';
 import { TransformInterceptor } from './common/interceptors/transform.interceptor';
 import { UserModule } from './user/user.module';
+import { HttpModule } from '@nestjs/axios';
 
 @Module({
   imports: [
-    ConfigModule.forRoot({ isGlobal: true }),
-    TypeOrmModule.forRoot({ autoLoadEntities: true }),
+    // ConfigModule.forRoot({ isGlobal: true }),
+    // TypeOrmModule.forRoot({ autoLoadEntities: true }),
     UserModule,
+    HttpModule,
   ],
   controllers: [AppController],
   providers: [
