@@ -8,10 +8,10 @@ export NVM_DIR="/home/ec2-user/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
-cd secret
-sudo mv .env.development ../
-cd ../
-rm -rf secret
+#cd secret
+#sudo mv .env.development ../
+#cd ../
+#rm -rf secret
 
 
-yarn start
+yarn start:prod
