@@ -31,7 +31,7 @@ jobs:
         run: npm run build
 
       - name: zip create
-        run: zip -qq -r kroad.zip
+        run: zip -qq -r ./kroad.zip .
         shell: bash
 
       - name: configure AWS
