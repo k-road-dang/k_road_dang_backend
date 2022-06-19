@@ -1,7 +1,6 @@
 # scripts/after_deploy.sh
 #!/bin/bash
-REPOSITORY=/home/ec2-user/nest-app
-cd $REPOSITORY
+cd /home/ec2-user/nest-app
 
 yarn -v
 #npm install -g yarn
