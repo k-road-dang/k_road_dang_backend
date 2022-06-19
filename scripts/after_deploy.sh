@@ -14,4 +14,4 @@ cd $REPOSITORY
 #rm -rf secret
 #
 
-npm start
+yarn start
