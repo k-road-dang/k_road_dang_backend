@@ -53,5 +53,5 @@ jobs:
             --application-name kroad-codeDeploy 
             --deployment-config-name CodeDeployDefault.AllAtOnce 
             --deployment-group-name kroad-server-team
-            --s3-location bucket=kroad-deploy,key=kroad-deploy/kroad.zip,bundelType=zip
+            --s3-location bucket=kroad-deploy,key=kroad-deploy/kroad.zip,bundleType=zip
 
