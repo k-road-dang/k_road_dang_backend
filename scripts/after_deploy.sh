@@ -3,15 +3,11 @@
 REPOSITORY=/home/ec2-user/nest-app
 cd $REPOSITORY
 
-# nvm 환경변수 등록
-#export NVM_DIR="/home/ec2-user/.nvm"
-#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
-#cd secret
-#sudo mv .env.development ../
-#cd ../
-#rm -rf secret
-
+npm install -g yarn
 
 yarn start:prod
+
