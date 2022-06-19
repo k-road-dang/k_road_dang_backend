@@ -1,0 +1,21 @@
+version: 0.1
+os: linux
+#codeDeploy 배포시 ec2인스턴스 내에서 실행하게될 스크립트
+
+files:
+  - source: /
+    destination: /home/ec2-user/nest-app
+    overwrite: yes
+permissions:
+  - object: /home/ec2-user
+    pattern: '**'
+    owner: root
+    group: root
+    mode: 755
+hooks:
+  BeforeInstall:
+    - location: scripts/before_deploy.sh
+      runas: root
+  AfterInstall:
+    - location: scripts/after_deploy.sh
+      runas: root
