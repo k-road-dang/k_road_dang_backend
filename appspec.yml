@@ -1,4 +1,4 @@
-version: 0.1
+version: 0.0
 os: linux
 #codeDeploy 배포시 ec2인스턴스 내에서 실행하게될 스크립트
 
