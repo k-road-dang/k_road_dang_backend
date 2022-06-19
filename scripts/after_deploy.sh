@@ -1,12 +1,11 @@
 # scripts/after_deploy.sh
 #!/bin/bash
 cd /home/ec2-user/nest-app
-. ~/.nvm/nvm.sh
-nvm install 16
-node -v
+
+export NVM_DIR="/home/ec2-user/.nvm" [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+source /home/ec2-user/.bash_profile
+
 npm install -g yarn
-yarn -v
-#npm install -g yarn
 #
-#yarn start:prod
+yarn start:prod
 
