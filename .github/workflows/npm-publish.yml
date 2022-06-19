@@ -28,7 +28,7 @@ jobs:
         run: yarn install --frozen-lockfile
 
       - name: Build
-        run: nest build
+        run: npm run build
 
       - name: zip create
         run: zip --qq -r ./kroad.zip
