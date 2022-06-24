@@ -11,7 +11,7 @@ source /home/ec2-user/.bash_profile
 #export NVM_DIR="/home/ec2-user/nest-app/.nvm"
 #[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
-#npm install -g yarn
+npm install -g yarn
 #
 #yarn start:prod
 
