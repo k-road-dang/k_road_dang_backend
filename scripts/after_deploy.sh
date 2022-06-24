@@ -8,7 +8,7 @@ cd /home/ec2-user/nest-app
 
 #source /home/ec2-user/.bash_profile
 
-#npm install -g yarn
+npm install -g yarn
 #
 #yarn start:prod
 
