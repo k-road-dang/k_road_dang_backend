@@ -17,6 +17,6 @@ nvm alias default 16.15.1
 node -v
 
 npm install --global yarn
-#yarn start:prod
+yarn start:prod
 
 
