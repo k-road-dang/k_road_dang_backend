@@ -23,6 +23,9 @@ source /home/ec2-user/.bash_profile
 
 nvm -v
 nvm install node16.15.1
+nvm alias default 16.15.1
+node -v
+
 whereis node
 
 which npm
