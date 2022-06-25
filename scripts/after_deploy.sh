@@ -18,7 +18,7 @@ source /home/ec2-user/.bash_profile
 ##
 #npm install --global yarn
 #yarn
-npm run start:prod
+#npm run start:prod
 #sudo pm2 start app.js
 
 
