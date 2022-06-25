@@ -8,6 +8,6 @@ export NVM_DIR="$HOME/.nvm"
 
 source /home/ec2-user/.bash_profile
 
-npm run start:prod
+yarn start:prod
 
 
