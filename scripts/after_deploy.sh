@@ -16,10 +16,11 @@ nvm -v
 #nvm alias default 16.15.1
 node -v
 sudo rm -rf node_modules
+sudo pm2 kill
+
 #npm install --global yarn
 yarn
 yarn start:prod
-#sudo pm2 kill
 #sudo pm2 start app.js
 
 
