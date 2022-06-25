@@ -22,3 +22,4 @@ cd /home/ec2-user/nest-app
 #sudo pm2 start app.js
 
 
+

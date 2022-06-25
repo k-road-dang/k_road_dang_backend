@@ -5,5 +5,5 @@ cd $REPOSITORY
 
 
 pm2 kill
-
+process.exit()
 sudo rm -rf nest-app
