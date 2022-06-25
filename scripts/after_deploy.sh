@@ -15,7 +15,8 @@ source /home/ec2-user/.bash_profile
 #nvm -v
 #
 #yarn start:prod
-sudo yum install npm
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.39.1/install.sh | bash
+source .bash_profile
 
 whereis node
 
