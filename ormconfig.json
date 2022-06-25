@@ -4,7 +4,7 @@
   "port":3306,
   "username": "test",
   "password": "test",
-  "database": "test",
+  "database": "testt",
   "entities": ["src/**/*.entity{.ts,.js}"],
   "synchronize": false
 }
