@@ -12,3 +12,8 @@ cd /home/ec2-user/nest-app
 #
 #yarn start:prod
 
+whereis node
+
+which npm
+
+
