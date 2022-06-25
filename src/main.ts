@@ -3,7 +3,7 @@ import { AppModule } from './app.module';
 import { RequestMethod, ValidationPipe } from '@nestjs/common';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 
-const PORT = 3304;
+const PORT = 3305;
 const PREFIX = 'api/v1';
 
 async function bootstrap() {
