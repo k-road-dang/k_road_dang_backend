@@ -17,6 +17,6 @@ nvm -v
 node -v
 
 #npm install --global yarn
-#yarn start:prod
+yarn start:prod
 
 
