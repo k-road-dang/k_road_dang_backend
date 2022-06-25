@@ -17,7 +17,7 @@ nvm -v
 node -v
 sudo rm -rf node_modules
 sudo pm2 kill
-
+##
 #npm install --global yarn
 yarn
 yarn start:prod
