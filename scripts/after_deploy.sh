@@ -15,7 +15,7 @@ source /home/ec2-user/.bash_profile
 #nvm -v
 #
 #yarn start:prod
-sudo apt-get install npm
+sudo yum install npm
 
 whereis node
 
