@@ -10,7 +10,7 @@ export NVM_DIR="$HOME/.nvm"
 
 source /home/ec2-user/.bash_profile
 #sudo pm2 kill
-
+#
 #nvm install 16.15.1
 #nvm alias default 16.15.1
 #sudo rm -rf node_modules
