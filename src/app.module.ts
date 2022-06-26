@@ -2,7 +2,7 @@ import { Module, ValidationPipe } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { ConfigModule } from '@nestjs/config';
+import { ConfigModule, ConfigService } from '@nestjs/config';
 import { APP_FILTER, APP_INTERCEPTOR, APP_PIPE } from '@nestjs/core';
 import { HttpExceptionFilter } from './common/filters/http-exception.filter';
 import { TransformInterceptor } from './common/interceptors/transform.interceptor';
@@ -11,10 +11,10 @@ import { HttpModule } from '@nestjs/axios';
 
 @Module({
   imports: [
-    // ConfigModule.forRoot({ isGlobal: true }),
-    // TypeOrmModule.forRoot({ autoLoadEntities: true }),
+    TypeOrmModule.forRoot(),
     UserModule,
     HttpModule,
+    ConfigModule.forRoot({ isGlobal: true }),
   ],
   controllers: [AppController],
   providers: [
