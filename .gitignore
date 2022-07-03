@@ -395,6 +395,7 @@ Temporary Items
 =======
 # Local
 ormconfig.json
-.env
+.env.dev
+.env.prod
 dist
 
