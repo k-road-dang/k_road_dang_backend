@@ -11,7 +11,7 @@ import { LoginType } from '../../enum/AppEnum';
 import { ApiProperty } from '@nestjs/swagger';
 
 @Entity({ name: 'user' })
-@Unique(['id'])
+@Unique(['userId'])
 export class User {
   @PrimaryGeneratedColumn('rowid')
   @ApiProperty({
