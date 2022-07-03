@@ -1,3 +1,3 @@
 export type Payload = {
-  _id: string;
+  socialId: string;
 };
