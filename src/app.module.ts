@@ -9,6 +9,7 @@ import { TransformInterceptor } from './common/interceptors/transform.intercepto
 import { UserModule } from './user/user.module';
 import { HttpModule } from '@nestjs/axios';
 import * as Joi from 'joi';
+import { LoginModule } from './login/login.module';
 
 @Module({
   imports: [
@@ -22,6 +23,11 @@ import * as Joi from 'joi';
         DB_USERNAME: Joi.string().required(),
         DB_PASSWORD: Joi.string().required(),
         DB_NAME: Joi.string().required(),
+
+        JWT_ACCESS_SECRET_KEY: Joi.string().required(),
+        JWT_REFRESH_SECRET_KEY: Joi.string().required(),
+        JWT_ACCESS_EXPRIRATION_TIME: Joi.string().required(),
+        JWT_REFRESH_EXPRIRATION_TIME: Joi.string().required(),
       }),
     }),
     TypeOrmModule.forRoot({
@@ -38,6 +44,7 @@ import * as Joi from 'joi';
       logging: ['query', 'error', 'schema'],
     }),
     UserModule,
+    LoginModule,
     HttpModule,
   ],
   controllers: [AppController],

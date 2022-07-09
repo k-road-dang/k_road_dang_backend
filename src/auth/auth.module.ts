@@ -4,7 +4,9 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { AuthService } from './auth.service';
 import { UserModule } from '../user/user.module';
 import { KaKaoStrategy } from './strategies/kakao.strategy';
-import { JwtStrategy } from './strategies/jwt.strategy';
+import { JwtAccessStrategy } from './strategies/jwtAccess.strategy';
+import { JwtRefreshStrategy } from './strategies/jwtRefresh.strategy';
+import { UserService } from '../user/user.service';
 
 @Module({
   imports: [
@@ -12,19 +14,26 @@ import { JwtStrategy } from './strategies/jwt.strategy';
       imports: [ConfigModule],
       useFactory: async (configService: ConfigService) => {
         return {
-          secret: process.env.JWT_SECRET_KEY,
+          secret: process.env.JWT_ACCESS_SECRET_KEY,
           signOptions: {
-            expiresIn: 20,
+            expiresIn: process.env.JWT_ACCESS_SECRET_KEY,
           },
         };
       },
 
       inject: [ConfigService],
     }),
+
     ConfigModule,
     UserModule,
   ],
-  providers: [AuthService, KaKaoStrategy, JwtStrategy],
+  providers: [
+    AuthService,
+    KaKaoStrategy,
+    UserService,
+    JwtAccessStrategy,
+    JwtRefreshStrategy,
+  ],
   exports: [AuthService],
 })
 export class AuthModule {}

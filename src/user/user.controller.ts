@@ -16,6 +16,7 @@ export class UserController {
       name: '홍길동',
     };
   }
+
   @Get(':userId')
   @ApiOperation({ summary: '사용자 정보 가져오기' })
   async getUser(@Param() params: UserInfoDto): Promise<UserInfoDto> {
